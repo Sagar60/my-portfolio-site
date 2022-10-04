@@ -2,7 +2,7 @@
 
 Welcome to my portfolio.
 
-Please visit below mention site to view my work and contact details.
+Please visit below mentioned site to view my work and contact details.
 
 https://my-portfolio-site000001.herokuapp.com/
 
