@@ -309,12 +309,13 @@
     // page full content refresh check
     const HidePageElement = document.getElementById('HidePageElement');
     var ApiNumber = 0;
-    const intTotalApiUsed = 1; 
     function ContentVisible(){
         this.ApiNumber++;
+        // define total api
+        const intTotalApiUsed = 1; 
 
         // hide loader 
-        if(this.ApiNumber === this.intTotalApiUsed){
+        if(this.ApiNumber == intTotalApiUsed){
             document.getElementById('loader').style.display='none';
             document.getElementsByClassName('loader-section-left')[0].classList.add('active');
             document.getElementsByClassName('loader-section-right')[0].classList.add('active');
@@ -324,13 +325,7 @@
                 HidePageElement.style.display = 'none';
             },800)
         }
-        // console.log(this.ApiNumber);
+        // console.log(this.ApiNumber,intTotalApiUsed);
     }
 
 </script>
-
-
-
-
-</body>
-</html>
