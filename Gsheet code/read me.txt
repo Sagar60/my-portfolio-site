@@ -1,0 +1,17 @@
+Add data to sheet
+
+https://script.google.com/macros/s/AKfycbz2iLGYykCrQR9b39sfphbt9dvNZUImIyblpqIbhBoggApdYcCzmCoskEG800yT10po/exec?name=Sagar&email=a@b.com&message=hello
+
+Create auto font in gsheet in daily tracker project
+
+https://script.google.com/macros/s/AKfycbzryFJyXncaKSkYVh8UbZjcvYn9Lz6ovZN3wnFsGQNW3RU4xhOJEuVf8iKc-cGPgaTG/exec?sheetName=03_10_2022
+
+Api for getting personal info sheet data:
+
+https://script.google.com/macros/s/AKfycbz6QhdZzMsMfDVjEgxq_dH_xHGOBwBNgLwA-f-oOLNIWMkKFmfIxGtIOjavYPAZRg3F/exec
+
+
+https://script.google.com/macros/s/AKfycbyG7nbsEz82XfZLW99aZzMMIQw_I3Z1liv1KTOazqFpKGiMIS_BpjfDEii1__5T_aFJ/exec
+
+updated:
+https://script.google.com/macros/s/AKfycbwG91sExpLqnXdeSzZwLR3cMofyvZDdWsiniDmhXkqAOVWfzykVnEN-kjHltzymfeo/exec

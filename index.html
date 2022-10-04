@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Sagar's portfolio site</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://kit.fontawesome.com/58259be448.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- --------------- home / header page ------------ -->
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images//logo1.png" class="logo" alt="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class='fas fa-times' onclick="closemenu()"></i>
+                </ul>
+                <i class='fas fa-bars' onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>RPA Developer</p>
+                <h1>Hi, I'm <span> Sagar </span><br>Das from West Bengal, India. </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------about page -------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user1.png" alt="">
+                </div>
+                <div class="about-col-2" >
+                    <h1 class="sub-title">About Me</h1>
+                    <p id="aboutMe-p">
+                        <!-- I have work experience of near about 1 year at ITC Infotech in the RPA Automation domain. During this time frame I have worked on a 
+                        Finance based project, apart from this I, have worked on different technologies for RPA Automation 
+                        like UiPath, Automation Anywhere, and Microsoft Power Automate, and have working experience 
+                        in the Alteryx tool. Also, I know programming languages like C/Cpp, Java, Python, and Javascript. -->
+                    </p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                        <!-- -------  Skill -----  -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <!-- <ul>
+                            <li><span>Known Tools</span><br>UiPath, Automation Anywhere, Power Automate</li>
+                            <li><span>Knwon Programme Language</span><br>C/Cpp, Java,Javascript, Python, C#(beginner)</li>
+                            <li><span>Web based applications</span><br>Have knowledge of Google services like GDocs, GSheet, Appscript, also AWS some services 
+                            like S3 bucket, lambda, Textract.</li>
+                            <li><span>Web Developer</span><br>Have knowledge of HTML, CSS, Node JS,Mongo DB, PHP, MEAN Stack tech</li>
+                        </ul> -->
+                        <!-- <div *ngFor="let item in users; index as i">
+                            <i>{{i}}</i> 
+                        </div> -->
+                    </div>
+                    <!-- ------------ experience ---------------- -->
+                    <div class="tab-contents" id="experience">
+                        <!-- <ul>
+                            <li><span>2021 - Current</span><br>ITC Infotech India Ltd. as a RPA Developer.</li>
+                        </ul> -->
+                    </div>
+                    <!-- ------------ Education ---------------- -->
+                    <div class="tab-contents" id="education">
+                        <!-- <ul>
+                            <li><span>2017-2021</span><br>Completed bachelor degree in ECE Engineering with 8.58 GPA.</li>
+                            <li><span>2017</span><br>Completed Higher Secondary exam with 79%.</li>
+                            <li><span>2015</span><br>Completed secondary exam with 64%.</li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ---------- services ------------  -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <!-- <div>
+                    <i class="fas fa-robot" ></i>
+                    <h2>UiPath Tool</h2>
+                    <p>Automated PDF, Excel files, different web/desktop applications. Explored CV,
+                        AI Center, Action Center LINQ Query, REFramework, Process Automation, Test
+                        Automation etc. concepts in UiPath. Integrated different services like GSheet,
+                        Postman, Python etc.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class='fas fa-robot'></i>
+                    <h2>Automation Anywhere Tool</h2>
+                    <p>Have certificate of Advance and Master RPA Professional in Automation 360.</p>
+                    <a href="#">Learn more</a>
+                </div> 
+                <div>
+                    <i class='fas fa-crop-alt'></i>
+                    <h2>Alteryx Tool</h2>
+                    <p>Using Alteryx collect, analyze and showcase data from different source including
+                        database connections, flat files, sharepoint, APIs, etc and worked on a project.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa fa-search"></i>
+                    <h2>AWS OCR</h2>
+                    <p>I have worked on AWS Textract OCR engine API and inbuild services to extract data like raw text, table and key-value pair from document.</p>
+                    <a href="#">Learn more</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+ <!-- ---------- portfolio-------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My  Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>Social media App</h3> 
+                        <p>
+                            The app contents you to the GVAUGUJa,dbmsDSAJDKMSA.C XZLKCDHASOIFHDIQSFMCA.XZ,MC.XZM. XZ
+                        </p>
+                        <a href="#"><i class='fas fa-external-link-alt'></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Social media App</h3> 
+                        <p>
+                            The app contents you to the SDYSABWS,CNSK.NVJ;SD N JDLKFDAIPLFJWPOF.DSAMFCfjioiejfv 
+                        </p>
+                        <a href="#"><i class='fas fa-external-link-alt'></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Social media App</h3> 
+                        <p>
+                            The app contents you to the doifqwdm,sacasc ,m khfec  mfnecfuohfoqad
+                        </p>
+                        <a href="#"><i class='fas fa-external-link-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+ <!-- ------------------ contact form   ------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa fa-paper-plane"></i>sagardaa058@gmail.com</p>
+                    <p><i class="fa fa-phone-square-alt"></i>7001139324</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/Sagar.Sonu.Das3/"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/sagar-das-b182661a7/"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://github.com/sagar60"><i class="fa fa-github"></i></a>
+                        <a href="https://twitter.com/sagardaa058"><i class="fa fa-twitter-square"></i></a>
+                    </div>
+                    <a href="#" target="_blank" onmouseover="javascript: this.href = PersonalInfoObj['Contact details'][0]['my-CV'];" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="#" id="contactForm" method="post">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Sagar. All rights reserved. Integrated with Google Apps Script Api.</p>
+            <p>Thanks for visiting. <i class="fas fa-handshake"></i></p>
+        </div>
+    </div>
+
+
+ <!-- -------- js script ------ -->
+
+<script type="text/javascript">
+
+    // open tab in about sedction
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabContents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        // clear link
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        // clear active tab
+        for(tabContent of tabContents){
+            tabContent.classList.remove("active-tab")
+        }
+
+        // active tab name
+        event.currentTarget.classList.add('active-link');
+        tabContents[tabname].classList.add('active-tab')
+    }
+
+    // fold side menu
+    const sideMenu =document.getElementById('sidemenu');
+    function openmenu(){
+        sideMenu.style.right = '0';
+    }
+    function closemenu(){
+        sideMenu.style.right = '-200px';
+    }
+
+    // store personal data info from gsheet
+    const PersonalInfoObj = {}
+    function getPersonalInfo(){
+        // deploy id for getting personal info
+        //let deployId = 'AKfycbzvRmwlramrwUDUN19Kc79RNMQLMCwE2_6seFp78khHg68sKaFJfjMa5V-oxfEs46D4';
+        let deployId = 'AKfycbxDKFa2edq8LRhMVWE6XpwAjRzSaYcnNuXA7QYlg_MNRpOZb9T_ymf-69LJNxuZbuAh';
+
+        fetch(`https://script.google.com/macros/s/${deployId}/exec`)
+        .then( (data)=> data.json())
+        .then((data)=> {data.message === 'success'? 
+            Object.assign(PersonalInfoObj,data.data) : 
+            console.error('error getting personal info');
+
+            // prevent to delete of exist property but exist property can be update
+            //Object.seal(PersonalInfoObj);
+
+            // prevent from all the changes in object
+            Object.freeze(PersonalInfoObj);
+
+            // design html 
+            for(let key in PersonalInfoObj){
+                //console.log(key);
+                // if id exist
+                if(key.trim && document.getElementById(key.toString().toLowerCase())){
+                    // console.log(PersonalInfoObj[key]);
+                    const HTMLID = document.getElementById(key.toString().toLowerCase());
+                    const ULElement = document.createElement('ul');
+                    PersonalInfoObj[key].forEach((element,index) => {
+                        // console.log(Object.keys(element)[0]);
+                        // console.log(Object.values(element)[0]);
+                        ULElement.innerHTML += `
+                        <li><span>${Object.keys(element)[0]}</span><br>${Object.values(element)[0]}</li>
+                        `;
+                    });
+                    //console.log(ULElement)
+                    // append to html tag child
+                    HTMLID.appendChild(ULElement);
+                }
+                // others type
+                if(!key){
+                    // console.log(getvalue(PersonalInfoObj[key],'about me'));
+                    // about me text
+                    document.getElementById('aboutMe-p').innerHTML = getvalue(PersonalInfoObj[key],'about me')
+                }
+                if(key.includes('My Services')){
+                    PersonalInfoObj[key].forEach((element,index) => {
+                        let DivElement = document.createElement('div');
+                        console.log(JSON.parse(element['description']))
+                        DivElement.innerHTML = `
+                        <i class="${JSON.parse(element['description'])['logo']}" ></i>
+                        <h2>${Object.keys(element)[0]}</h2>
+                        <p>
+                            ${Object.values(element)[0]}
+                        </p>
+                        <a href="#">Learn more</a>
+                        `;
+                        //console.log(DivElement);
+                        document.getElementsByClassName('services-list')[0].appendChild(DivElement);
+                    });
+                }
+            }
+            
+        })
+        .catch( error => console.error('error!', error.message));
+    }
+    // call the function
+    getPersonalInfo();
+
+    // get other key values
+    function getvalue(arr,keyValue){
+        //console.log(arr);
+        let result= null;
+        arr.filter((element)=>{
+            if(Object.keys(element).includes(keyValue)){
+                const index = Object.keys(element).indexOf(keyValue);
+                result = Object.values(element)[index];
+                return true;
+            }
+        })
+        return result;
+    }
+
+    // on contact form submit
+    document.getElementById('contactForm').addEventListener('submit',(e)=>{
+        e.preventDefault();
+        // initialize obj
+        const contactInfo = {}
+        //console.log(e)
+        for(let node of e.target.children){
+            if(node.type != 'submit'){
+                //console.dir(node)
+                contactInfo[node.name] = node.value;
+            }
+        }
+        //console.log(contactInfo);
+
+        const msgSpan = document.getElementById('msg');
+
+        // upload data to gsheet
+        const deployId = 'AKfycbz2iLGYykCrQR9b39sfphbt9dvNZUImIyblpqIbhBoggApdYcCzmCoskEG800yT10po';
+        fetch(`https://script.google.com/macros/s/${deployId}/exec?name=${contactInfo.name}&email=${contactInfo.email}&message=${contactInfo.message}`)
+        .then( (data)=> data.json())
+        .then((data)=> {
+            msgSpan.innerHTML = 'Message sent successfully. Thanks for writing me. ';
+            setTimeout(() => {
+                msgSpan.innerHTML = '';
+            }, 5000);
+            // clear form 
+            document.getElementById('contactForm').reset();
+        })
+        .catch( error => console.error('error!', error.message));
+    })
+
+</script>
+
+
+
+
+</body>
+</html>
