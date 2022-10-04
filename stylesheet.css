@@ -467,6 +467,46 @@ nav .fas{
     -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
         animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
+.loader-section-left,.loader-section-right{
+    display: none;
+    position: absolute;
+    width: 50%;
+    top: 0;
+    z-index: 999;
+    background-color: rgb(184, 242, 251);
+    height: 100%;
+    transition: all 0.5s;
+}
+.loader-section-left.active{
+    display: block;
+    left: 0;
+    animation: foldLeft 0.7s linear forwards;
+}
+.loader-section-right.active{
+    display: block;
+    right: 0;
+    animation: foldRight 0.7s linear forwards;
+}
+@keyframes foldLeft{
+    0%{
+        display: block;
+        left: 0;
+    }
+    100%{
+        left: -50%;
+        display: none;
+    }
+}
+@keyframes foldRight{
+    0%{
+        display: block;
+        right: 0;
+    }
+    100%{
+        right: -50%;
+        display: none;
+    }
+}
 
 @-webkit-keyframes spin {
     0%   { 
