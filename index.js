@@ -1,6 +1,10 @@
 const express = require('express');
 const http =require('http');
 
+// refresh auto when changes happend in js
+// npm i -g nodemon
+require(__dirname)
+
 const app = express();
 
 //to load current directory all files
@@ -17,5 +21,5 @@ const server = http.createServer(app);
 
 server.listen(port,()=>{
     console.log(__dirname);
-    console.log(`server started at ${port}`);
+    console.log(`Server started at: ${port}`);
 })
