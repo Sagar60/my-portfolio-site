@@ -21,5 +21,5 @@ const server = http.createServer(app);
 
 server.listen(port,()=>{
     console.log(__dirname);
-    console.log(`Server started at: ${port}`);
+    console.log(`Server is listening on port: ${port}`);
 })

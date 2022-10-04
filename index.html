@@ -38,7 +38,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/user1.png" alt="">
+                    <img src="images/user2.png" alt="">
                 </div>
                 <div class="about-col-2" >
                     <h1 class="sub-title">About Me</h1>
@@ -158,7 +158,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
+            <a href="#" onclick="javascript: alert('Thanks for showing interest\nWill  update soon.')" class="btn">See more</a>
         </div>
     </div>
 
@@ -275,7 +275,7 @@
                 if(key.includes('My Services')){
                     PersonalInfoObj[key].forEach((element,index) => {
                         let DivElement = document.createElement('div');
-                        console.log(JSON.parse(element['description']))
+                        //console.log(JSON.parse(element['description']))
                         DivElement.innerHTML = `
                         <i class="${JSON.parse(element['description'])['logo']}" ></i>
                         <h2>${Object.keys(element)[0]}</h2>
