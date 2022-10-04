@@ -17,9 +17,12 @@ app.get('/',(req,res)=>{
 
 const port = process.env.PORT || 8080;
 
+// create server
 const server = http.createServer(app);
 
+// run server on a port
 server.listen(port,()=>{
     console.log(__dirname);
     console.log(`Server is listening on port: ${port}`);
+    console.log(`Server start time: ${new Date()}`);
 })

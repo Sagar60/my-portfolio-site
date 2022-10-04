@@ -10,6 +10,12 @@
     <script src="https://kit.fontawesome.com/58259be448.js" crossorigin="anonymous"></script>
 </head>
 <body>
+     <!-- --------- wait for page content load --------- -->
+    <div id="HidePageElement">
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+        </div>
+    </div>
     <!-- --------------- home / header page ------------ -->
 
     <div id="header">
@@ -38,15 +44,12 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/user3.png" alt="">
+                    <img src="images/user1.png" alt="">
                 </div>
                 <div class="about-col-2" >
                     <h1 class="sub-title">About Me</h1>
                     <p id="aboutMe-p">
-                        <!-- I have work experience of near about 1 year at ITC Infotech in the RPA Automation domain. During this time frame I have worked on a 
-                        Finance based project, apart from this I, have worked on different technologies for RPA Automation 
-                        like UiPath, Automation Anywhere, and Microsoft Power Automate, and have working experience 
-                        in the Alteryx tool. Also, I know programming languages like C/Cpp, Java, Python, and Javascript. -->
+                        
                     </p>
                     <div class="tab-title">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -55,30 +58,15 @@
                     </div>
                         <!-- -------  Skill -----  -->
                     <div class="tab-contents active-tab" id="skills">
-                        <!-- <ul>
-                            <li><span>Known Tools</span><br>UiPath, Automation Anywhere, Power Automate</li>
-                            <li><span>Knwon Programme Language</span><br>C/Cpp, Java,Javascript, Python, C#(beginner)</li>
-                            <li><span>Web based applications</span><br>Have knowledge of Google services like GDocs, GSheet, Appscript, also AWS some services 
-                            like S3 bucket, lambda, Textract.</li>
-                            <li><span>Web Developer</span><br>Have knowledge of HTML, CSS, Node JS,Mongo DB, PHP, MEAN Stack tech</li>
-                        </ul> -->
-                        <!-- <div *ngFor="let item in users; index as i">
-                            <i>{{i}}</i> 
-                        </div> -->
+                        
                     </div>
                     <!-- ------------ experience ---------------- -->
                     <div class="tab-contents" id="experience">
-                        <!-- <ul>
-                            <li><span>2021 - Current</span><br>ITC Infotech India Ltd. as a RPA Developer.</li>
-                        </ul> -->
+                        
                     </div>
                     <!-- ------------ Education ---------------- -->
                     <div class="tab-contents" id="education">
-                        <!-- <ul>
-                            <li><span>2017-2021</span><br>Completed bachelor degree in ECE Engineering with 8.58 GPA.</li>
-                            <li><span>2017</span><br>Completed Higher Secondary exam with 79%.</li>
-                            <li><span>2015</span><br>Completed secondary exam with 64%.</li>
-                        </ul> -->
+                        
                     </div>
                 </div>
             </div>
@@ -91,34 +79,7 @@
         <div class="container">
             <h1 class="sub-title">My Services</h1>
             <div class="services-list">
-                <!-- <div>
-                    <i class="fas fa-robot" ></i>
-                    <h2>UiPath Tool</h2>
-                    <p>Automated PDF, Excel files, different web/desktop applications. Explored CV,
-                        AI Center, Action Center LINQ Query, REFramework, Process Automation, Test
-                        Automation etc. concepts in UiPath. Integrated different services like GSheet,
-                        Postman, Python etc.</p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class='fas fa-robot'></i>
-                    <h2>Automation Anywhere Tool</h2>
-                    <p>Have certificate of Advance and Master RPA Professional in Automation 360.</p>
-                    <a href="#">Learn more</a>
-                </div> 
-                <div>
-                    <i class='fas fa-crop-alt'></i>
-                    <h2>Alteryx Tool</h2>
-                    <p>Using Alteryx collect, analyze and showcase data from different source including
-                        database connections, flat files, sharepoint, APIs, etc and worked on a project.</p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa fa-search"></i>
-                    <h2>AWS OCR</h2>
-                    <p>I have worked on AWS Textract OCR engine API and inbuild services to extract data like raw text, table and key-value pair from document.</p>
-                    <a href="#">Learn more</a>
-                </div> -->
+                
             </div>
         </div>
     </div>
@@ -128,21 +89,23 @@
             <h1 class="sub-title">My  Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="images/work-1.png" alt="">
+                    <img src="images/work12.png" alt="">
                     <div class="layer">
-                        <h3>Social media App</h3> 
+                        <h3>Extract table using OCR</h3> 
                         <p>
-                            The app contents you to the GVAUGUJa,dbmsDSAJDKMSA.C XZLKCDHASOIFHDIQSFMCA.XZ,MC.XZM. XZ
+                            In this use case extracting table and we can also extract other info from a document(PDF/JPEG/PNG) and storing into csv file.
+                            <br> Use case created by AWS textract.
                         </p>
                         <a href="#"><i class='fas fa-external-link-alt'></i></a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/work-2.png" alt="">
+                    <img src="images/work2.png" alt="">
                     <div class="layer">
-                        <h3>Social media App</h3> 
+                        <h3>Credit card statement analyser</h3> 
                         <p>
-                            The app contents you to the SDYSABWS,CNSK.NVJ;SD N JDLKFDAIPLFJWPOF.DSAMFCfjioiejfv 
+                            Here one UiPath bot will fetch all the Bank Credit card monthly statement from user mail address and in result bot will create an Excel report for every month statement with total debitted amount till now.
+                            <br>Using Document understading bot is detecting the statements.
                         </p>
                         <a href="#"><i class='fas fa-external-link-alt'></i></a>
                     </div>
@@ -158,11 +121,7 @@
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-            <a href="javascript:void(0)" onclick="javascript: alert('Thanks for showing interest\nWill update soon.')" class="btn">See more..</a>
-=======
               <a href="javascript:void(0)" onclick="javascript: alert('Thanks for showing interest\nWill update soon.')" class="btn">See more..</a>
->>>>>>> d57bc965399b05b283590d61b88aafa955632b21
         </div>
     </div>
 
@@ -293,7 +252,7 @@
                     });
                 }
             }
-            
+            ContentVisible();
         })
         .catch( error => console.error('error!', error.message));
     }
@@ -343,7 +302,17 @@
             document.getElementById('contactForm').reset();
         })
         .catch( error => console.error('error!', error.message));
-    })
+    });
+    
+    // page full content refresh check
+    const HidePageElement = document.getElementById('HidePageElement');
+    var ApiNumber = 0
+    function ContentVisible(){
+        this.ApiNumber++;
+        // hide loader 
+        HidePageElement.style.display = 'none';
+        // console.log(this.ApiNumber);
+    }
 
 </script>
 
