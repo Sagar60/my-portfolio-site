@@ -331,10 +331,20 @@
         //console.log(contactInfo);
 
         const msgSpan = document.getElementById('msg');
-
         // upload data to gsheet
-        const deployId = 'AKfycbz2iLGYykCrQR9b39sfphbt9dvNZUImIyblpqIbhBoggApdYcCzmCoskEG800yT10po';
-        fetch(`https://script.google.com/macros/s/${deployId}/exec?name=${contactInfo.name}&email=${contactInfo.email}&message=${contactInfo.message}`)
+        let deviceDetails;
+        // browser type check
+        if ("ontouchstart" in document.documentElement){
+             deviceDetails= 'Mobile';
+        }
+        else{
+            deviceDetails ='Desktop';
+        }
+        // const deployId = 'AKfycbz2iLGYykCrQR9b39sfphbt9dvNZUImIyblpqIbhBoggApdYcCzmCoskEG800yT10po';
+        const deployId = 'AKfycbyeblfKaovUZGnfZ6LXPvaZtAUUHdlD923ZxI2GTQ6nYiKW76hdUseSK_2X4nJf96f8';
+        const cTime = new Date().toLocaleString("en-US", {timeZone: 'Asia/Kolkata'});
+
+        fetch(`https://script.google.com/macros/s/${deployId}/exec?name=${contactInfo.name}&email=${contactInfo.email}&message=${contactInfo.message}&deviceDetail=${deviceDetails}&time=${cTime}`)
         .then( (data)=> data.json())
         .then((data)=> {
             msgSpan.innerHTML = 'Message sent successfully. Thanks for writing me. ';
@@ -343,16 +353,6 @@
             }, 5000);
             // clear form 
             document.getElementById('contactForm').reset();
-
-            // browser type check
-            if ("ontouchstart" in document.documentElement)
-            {
-                alert('mobile');
-            }
-            else
-            {
-                alert('desktop');
-            }
         })
         .catch( error => console.error('error!', error.message));
     });

@@ -15,3 +15,5 @@ https://script.google.com/macros/s/AKfycbyG7nbsEz82XfZLW99aZzMMIQw_I3Z1liv1KTOaz
 
 updated:
 https://script.google.com/macros/s/AKfycbwG91sExpLqnXdeSzZwLR3cMofyvZDdWsiniDmhXkqAOVWfzykVnEN-kjHltzymfeo/exec
+
+https://script.google.com/macros/s/AKfycbwPTIShq_-ZBKqW-rX-qVwVNNGnF4gb8yIwy6Jux3w/dev?name=Sagar&email=a@b.com&message=hello&deviceDetail=desktop&time=now
