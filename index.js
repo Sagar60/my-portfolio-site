@@ -25,5 +25,5 @@ const server = http.createServer(app);
 server.listen(port,()=>{
     console.log(__dirname);
     console.log(`Server is listening on port: ${port}`);
-    console.log(`Server start time: ${new Date().toLocaleString("en-US", {timeZone: 'Asia/Kolkata'})}`);
+    console.log(`Server start time in IST: ${new Date().toLocaleString("en-US", {timeZone: 'Asia/Kolkata'})}`);
 })
