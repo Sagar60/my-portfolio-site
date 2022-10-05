@@ -260,11 +260,11 @@
                         // to not to cache in the test, set src dynamically
                         img.src = ImgSRC;
 
-                        console.log('height before', img.naturalHeight); // 0
+                        //console.log('height before', img.naturalHeight); // 0
                         this.intTotalAsyncUsed++;
                         
                         await waitForImage(img);
-                        console.log('height after', img.naturalHeight); // 48
+                        //console.log('height after', img.naturalHeight); // 48
                         ContentVisible()
                         })();
 
