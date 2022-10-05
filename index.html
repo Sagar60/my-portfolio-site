@@ -261,9 +261,8 @@
                         img.src = ImgSRC;
 
                         console.log('height before', img.naturalHeight); // 0
-                        if(ImgSRC != 'https://drive.google.com/uc?export=view&id='){
-                            this.intTotalAsyncUsed++;
-                        }
+                        this.intTotalAsyncUsed++;
+                        
                         await waitForImage(img);
                         console.log('height after', img.naturalHeight); // 48
                         ContentVisible()
