@@ -3,7 +3,7 @@ const http =require('http');
 
 // refresh auto when changes happend in js
 // npm i -g nodemon
-require(__dirname)
+require(__dirname);
 
 const app = express();
 
@@ -12,7 +12,8 @@ app.use(express.static(__dirname))
 
 // render index.html file
 app.get('/',(req,res)=>{
-    res.sendFile(__dirname +"\\"+"index.html");
+    // res.sendFile(__dirname +"\\"+"index.html");
+    res.render(__dirname +"\\"+"index.html");
 })
 
 const port = process.env.PORT || 8080;
@@ -24,5 +25,5 @@ const server = http.createServer(app);
 server.listen(port,()=>{
     console.log(__dirname);
     console.log(`Server is listening on port: ${port}`);
-    console.log(`Server start time: ${new Date()}`);
+    console.log(`Server start time: ${new Date().toLocaleString("en-US", {timeZone: 'Asia/Kolkata'})}`);
 })
