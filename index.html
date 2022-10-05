@@ -343,6 +343,16 @@
             }, 5000);
             // clear form 
             document.getElementById('contactForm').reset();
+
+            // browser type check
+            if ("ontouchstart" in document.documentElement)
+            {
+                alert('mobile');
+            }
+            else
+            {
+                alert('desktop');
+            }
         })
         .catch( error => console.error('error!', error.message));
     });
