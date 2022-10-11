@@ -381,4 +381,34 @@
         // console.log(this.ApiNumber,intTotalApiUsed);
     }
 
+    // Store user info in sheet
+    function storeUserInfo(){
+        fetch('https://api.db-ip.com/v2/free/self')
+        .then(data => data.json())
+        .then(data => {
+            // console.log(data)
+            const city = data.city;
+            const ipAddress = data.ipAddress;
+            const ContinentCode = data.continentCode;
+            const ContinentName = data.continentName;
+            const ContryCode = data.countryCode;
+            const CountryName = data.countryName;
+            const state = data.stateProv;
+
+            const userDeployAPIId = 'AKfycbyjs65JGNNFrKFlFCCv6T4yBaou7L2xGcHLD5CYbEvdFr54us4Xh5aW2mikyBMCG_R_';
+            const api = `https://script.google.com/macros/s/${userDeployAPIId}/exec?ipAddress=${ipAddress}&continentCode=${ContinentCode}&continentName=${ContinentName}&countryCode=${ContryCode}&countryName=${CountryName}&stateProv=${state}&city=${city}`
+
+            fetch(api)
+            .then(data =>data.json())
+            .then(data => {
+                // console.log(data)
+            })
+            .catch(error => console.error(error))
+
+            // console.log(api);
+        })
+        .catch(error => console.error(error))
+            }
+    // call store function
+    storeUserInfo();
 </script>
