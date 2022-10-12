@@ -405,7 +405,7 @@ nav .fas{
     border: 3px solid transparent;
     border-top-color: #f9c922;
     -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-        animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
 .loader-section-left,.loader-section-right{
     display: none;
@@ -510,7 +510,7 @@ nav .fas{
     border-top-right-radius: 10px;
     background-color: #1fc8db;
     background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
-    animation: totalVisitorEffect 1.5s ease-in-out infinite;
+    animation: totalVisitorEffect 0.9s linear infinite;
 
 }
 #total-visitor > div > p:last-child{
@@ -544,8 +544,12 @@ nav .fas{
     }
     50%{
         border-radius: 0;
-    }100%{
+    }75%{
         border-radius: 0;
+    }
+    100%{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
         transform: rotate3d(1,0,0,360deg);  /* IE 9 */
     }
 }
