@@ -74,7 +74,7 @@ nav ul li a:hover::after{
 
  /* ---------------- about ------------------ */
 
-#about{
+ #about{
     padding: 80px 0;
     color: #ababab;
  }
@@ -473,82 +473,6 @@ nav .fas{
     }
 }
 
-/* ----------- total visitor -------  */
-.visitor-counter{
-    display: flex;
-    flex-direction: row;
-}
-.visitor-counter .submit-btn{
-    flex-basis: 35%;
-}
-#total-visitor{
-    flex-basis: 65%;
-    position: relative;
-    display: none;
-    /* display: inline; */
-}
-#total-visitor > div{
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-style: italic;
-    font-family: 'Times New Roman', Times, serif;
-}
-#total-visitor > div > p{
-    font-weight: 700;
-    font-size: 0.85em;
-    letter-spacing: 1px;
-    background-color: white;
-    color: black;
-    text-align: center;
-    padding: 10px;
-    /* width: 85%; */
-    margin-bottom: 2px;
-}
-#total-visitor > div > p:first-child{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: #1fc8db;
-    background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
-    animation: totalVisitorEffect 1.5s ease-in-out infinite;
-
-}
-#total-visitor > div > p:last-child{
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    animation: folding 2.5s ease-in-out infinite;
-    animation-delay: 5s;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    background-color: #64d2a4;
-}
-
-@keyframes totalVisitorEffect {
-    0%{
-        background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
-
-    }
-    50%{
-        background-image: linear-gradient(140deg,#BFD641  0%, #EADEDB 50%, #BC70A4 75%);
-
-    }100%{
-        background-image: linear-gradient(140deg,#BC70A4   0%,#BFD641  50%,#EADEDB 75%);
-
-    }
-}
-
-@keyframes folding {
-    0%{
-        transform:  rotate3d(1,0,0,0deg);
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
-    50%{
-        border-radius: 0;
-    }100%{
-        border-radius: 0;
-        transform: rotate3d(1,0,0,360deg);  /* IE 9 */
-    }
-}
 
 
   /* -------  css for small screen ------------- */

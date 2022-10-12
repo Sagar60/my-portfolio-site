@@ -91,7 +91,16 @@
         <div class="container">
             <h1 class="sub-title">My  Work</h1>
             <div class="work-list">
-                
+                <!-- <div class="work">
+                    <img src="images/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Social media App</h3> 
+                        <p>
+                            Update  will come soon.
+                        </p>
+                        <a href="#"><i class='fas fa-external-link-alt'></i></a>
+                    </div>
+                </div> -->
             </div>
               <a href="javascript:void(0)" onclick="javascript: alert('Thank you for showing interest\nWill update soon.')" class="btn">See more..</a>
         </div>
@@ -118,17 +127,7 @@
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-                        <div class="visitor-counter">
-                            <div class="submit-btn">
-                                <button type="submit" class="btn btn2">Submit</button>
-                            </div>
-                            <div id="total-visitor">
-                                <div>
-                                    <p>Total Visitor(s)</p>
-                                    <p id="visitor-count">10</p>
-                                </div>
-                            </div>
-                        </div>
+                        <button type="submit" class="btn btn2">Submit</button>
                     </form>
                     <span id="msg"></span>
                 </div>
@@ -213,28 +212,9 @@
                 }
                 // others type
                 if(!key){
-                    const viewKey = "";
-                    // console.log(PersonalInfoObj[key]);
-                    // console.log( getvalue(PersonalInfoObj[key],viewKey));
-
+                    // console.log(getvalue(PersonalInfoObj[key],'about me'));
                     // about me text
-                    const aboutKey = 'about me';
-                    let returnValue = getvalue(PersonalInfoObj[key], aboutKey)
-                    if(returnValue){
-                        document.getElementById('aboutMe-p').innerHTML = returnValue;
-                    }
-
-                    // total visitor
-                    const VisitorKey =  'TotalVisitedUser'
-                    returnValue = getvalue(PersonalInfoObj[key],VisitorKey);
-                    if(returnValue){
-                        console.log(returnValue);
-                        if(returnValue[1].toString().toLowerCase().includes('yes')){
-                            document.getElementById('total-visitor').style.display = "block";
-                            document.getElementById('visitor-count').innerHTML = returnValue[0];
-                        }
-                    }
-
+                    document.getElementById('aboutMe-p').innerHTML = getvalue(PersonalInfoObj[key],'about me')
                 }
                 // extract service data
                 if(key.includes('My Services')){
@@ -327,11 +307,10 @@
     function getvalue(arr,keyValue){
         //console.log(arr);
         let result= null;
-        arr.forEach((element)=>{
+        arr.filter((element)=>{
             if(Object.keys(element).includes(keyValue)){
-                // console.log(element);
                 const index = Object.keys(element).indexOf(keyValue);
-                result = [...Object.values(element)];
+                result = Object.values(element)[index];
                 return true;
             }
         })
@@ -429,7 +408,7 @@
             // console.log(api);
         })
         .catch(error => console.error(error))
-    }
+            }
     // call store function
     storeUserInfo();
 </script>
