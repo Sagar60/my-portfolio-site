@@ -228,7 +228,7 @@
                     const VisitorKey =  'TotalVisitedUser'
                     returnValue = getvalue(PersonalInfoObj[key],VisitorKey);
                     if(returnValue){
-                        console.log(returnValue);
+                        // console.log(returnValue);
                         if(returnValue[1].toString().toLowerCase().includes('yes')){
                             document.getElementById('total-visitor').style.display = "block";
                             document.getElementById('visitor-count').innerHTML = returnValue[0];
