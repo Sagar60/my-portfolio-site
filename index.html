@@ -267,11 +267,13 @@
                                 ${workData}
                             </P>`;
                         });
-                        //console.log(WorkDetailsPTag);
+                        console.log(JSON.parse(element['description'])['imageUrl']);
                         
                         // extract image location
-                        const ImgSRC = "https://drive.google.com/uc?export=view&id=" + JSON.parse(element['description'])['imageUrl'].match(/(?<=\/d\/)[\w]+/);
-                        // console.log(ImgSRC);
+                        // in between regex syntax 
+                        //(?<=start)(.*)(?=end)
+                        const ImgSRC = "https://drive.google.com/uc?export=view&id=" + JSON.parse(element['description'])['imageUrl'].match(/(?<=\/d\/)(.*)(?=\/view)/)[0];
+                         console.log(ImgSRC);
                         const workTag = document.createElement('div');
                         workTag.classList.add('work');
 
