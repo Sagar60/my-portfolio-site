@@ -26,7 +26,7 @@ function doGet(req) {
       range.setBackground('yellow');
       range.setHorizontalAlignment('center');
     }
-  // other row
+    // content row
     // bold the range
     range.setFontWeight(700);
 
@@ -43,7 +43,4 @@ function doGet(req) {
   }catch(e){
     return ContentService.createTextOutput(JSON.stringify({message: e.message})).setMimeType(ContentService.MimeType.JSON);
   }
-  
-
-
 }
