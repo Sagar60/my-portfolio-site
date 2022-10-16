@@ -3,7 +3,7 @@ function doGet(req) {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetName);
 
 /*
-  const ipAddress	= "103.245.3.19";
+  const ipAddress	= "test"+Math.random();
   const continentCode	= "AS";
   const continentName	= "Asia";
   const countryCode	= "IN";
@@ -24,7 +24,7 @@ function doGet(req) {
   var isIPAddressPresent = true;
 
   sheet.getDataRange().getValues().slice(1).forEach(function(row){
-    Logger.log(row[0])
+    //Logger.log(row[0])
     if(row[1].toString().trim().includes(ipAddress)){
       isIPAddressPresent = false;
     }
@@ -33,7 +33,22 @@ function doGet(req) {
   if(isIPAddressPresent){
     // append to sheet if data not found
     let cDate = new Date().toLocaleString("en-US", {timeZone: 'Asia/Kolkata'});
+
+    // add value to row
     sheet.appendRow([cDate, ipAddress, continentCode, continentName,countryCode,countryName, stateProv, city]);
+
+    let lastRowIndex = sheet.getDataRange().getValues().length;
+    let columnCount = sheet.getDataRange().getValues()[0].length;
+    Logger.log( lastRowIndex);
+    Logger.log( columnCount);
+    for(let i=0; i<columnCount ; i++){
+      let cellRangeAddress  = String.fromCharCode(65+i)+(lastRowIndex).toString();
+      let cell = sheet.getRange(cellRangeAddress);
+
+      // make border line for the range
+      cell.setBorder(true,true,true,true, false, false,'black', SpreadsheetApp.BorderStyle.SOLID);
+
+    }
 
     Logger.log('success');
     // data appened
