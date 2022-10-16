@@ -23,14 +23,14 @@ app.get('/',(req,res)=>{
 
 // catch 404 and forward to error handler
 app.use(function(req,res,next){
-    const error = new Error('url Not found');
+    const error = new Error('URL Not found');
     error.status = 404 ;
     next(error);
 });
 
 // error handler
 app.use(function(err,req,res,next){
-    // console.log('error handler');
+    console.log(`error handler: ${err.message}`);
     res.status(err.status || 500);
     res.sendFile(path.join(__dirname +'/ErrorPage.html'));
     
