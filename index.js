@@ -5,7 +5,6 @@ const path = require('path');
 
 // refresh auto when changes happend in js
 // npm i -g nodemon
-require(__dirname);
 
 const app = express();
 
@@ -17,6 +16,7 @@ app.use(morgan('dev'));
 
 // render index.html file
 app.get('/',(req,res)=>{
+    res.status(200);
     // res.sendFile(__dirname +"\\"+"index.html");
     res.sendFile(path.join(__dirname +'/index.html'));
 });
@@ -48,6 +48,7 @@ app.use(function(req,res,next){
     })
 })
 */
+
 const port = process.env.PORT || 8080;
 
 // create server
@@ -58,4 +59,4 @@ server.listen(port,()=>{
     console.log(__dirname);
     console.log(`Server is listening on port: ${port}`);
     console.log(`Server start time in IST: ${new Date().toLocaleString("en-US", {timeZone: 'Asia/Kolkata'})}`);
-})
+});
