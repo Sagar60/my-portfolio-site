@@ -516,8 +516,8 @@ nav .fas{
 #total-visitor > div > p:last-child{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    animation: folding 2.5s ease-in-out infinite;
-    animation-delay: 0s;
+    animation: folding 2.5s ease-in infinite;
+    animation-delay: 5s;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     background-color: #6dd5aa;
 }
@@ -537,30 +537,6 @@ nav .fas{
 }
 
 @keyframes folding {
-    /* 0%{
-        /* transform:  rotate3d(1,0,0,0deg);
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px; *
-        transform: translate3d(0,0,0) rotateX(0deg);
-
-    }
-    50%{
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        transform: translate3d(0,-36px,0) rotateX(180deg);
-        opacity: 1;
-    }75%{
-        border-radius: 0;
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-        transform: translate3d(0,0,0) rotateX(90deg);
-         border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        transform: rotate3d(1,0,0,360deg);  IE 9 
-    }
-     */
      0%{
         transform: translate3d(0,0,0) rotate(0deg);
 
@@ -568,9 +544,13 @@ nav .fas{
         opacity: .6;
         transform: translate3d(0,-38px,0) rotateX(180deg);
     }
-    100%{
+    60%{
+        opacity: 0;
+        transform: translate3d(0,-16px,0) rotate3d(1,0,0,-150deg);
+
+    }100%{
         opacity: 1;
-        transform: translate3d(0,0,0) rotateX(360deg);
+        transform: translate3d(0,-0px,0) rotate3d(1,0,0,45deg);
 
     }
 }
