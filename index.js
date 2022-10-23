@@ -21,6 +21,10 @@ app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname +'/index.html'));
 });
 
+// app.get('/test', (req,res)=>{
+//     res.sendFile(path.join(__dirname +'/test.html'));
+// })
+
 // catch 404 and forward to error handler
 app.use(function(req,res,next){
     const error = new Error('URL Not found');
@@ -34,20 +38,8 @@ app.use(function(err,req,res,next){
     res.status(err.status || 500);
     res.sendFile(path.join(__dirname +'/ErrorPage.html'));
     
-    /*
-    res.status(err.status || 500 );
-    res.json({
-        error: err.message
-    });*/
 });
 
-/*
-app.use(function(req,res,next){
-    res.status(404).json({
-        error: 'bad url'
-    })
-})
-*/
 
 const port = process.env.PORT || 8080;
 

@@ -517,7 +517,7 @@ nav .fas{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     animation: folding 2.5s ease-in-out infinite;
-    animation-delay: 5s;
+    animation-delay: 0s;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     background-color: #6dd5aa;
 }
@@ -537,20 +537,41 @@ nav .fas{
 }
 
 @keyframes folding {
-    0%{
-        transform:  rotate3d(1,0,0,0deg);
+    /* 0%{
+        /* transform:  rotate3d(1,0,0,0deg);
         border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 10px; *
+        transform: translate3d(0,0,0) rotateX(0deg);
+
     }
     50%{
-        border-radius: 0;
-    }75%{
-        border-radius: 0;
-    }
-    100%{
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
-        transform: rotate3d(1,0,0,360deg);  /* IE 9 */
+        transform: translate3d(0,-36px,0) rotateX(180deg);
+        opacity: 1;
+    }75%{
+        border-radius: 0;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translate3d(0,0,0) rotateX(90deg);
+         border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transform: rotate3d(1,0,0,360deg);  IE 9 
+    }
+     */
+     0%{
+        transform: translate3d(0,0,0) rotate(0deg);
+
+    }45%{
+        opacity: .6;
+        transform: translate3d(0,-36px,0) rotateX(180deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translate3d(0,0,0) rotateX(360deg);
+
     }
 }
 
