@@ -52,3 +52,10 @@ server.listen(port,()=>{
     console.log(`Server is listening on port: ${port}`);
     console.log(`Server start time in IST: ${new Date().toLocaleString("en-US", {timeZone: 'Asia/Kolkata'})}`);
 });
+
+// const regg = /(?<=\.)(\d{2,2})|(\d{2,2})(?=\.)/;
+
+// what patterns does this regex match?
+
+
+
